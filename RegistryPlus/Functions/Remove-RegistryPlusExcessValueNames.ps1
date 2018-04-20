@@ -8,11 +8,15 @@
     .Parameter InstanceName
         The name of the RegistryPlus resource instance.
 
-    .Parameter Ensure
-        Indicates if the key and value exist. To ensure that they do, set this property to "Present". To ensure that they do not exist, set the property to "Absent". The default value is "Present".
-
     .Parameter Key
         Indicates the path of the registry key for which you want to ensure a specific state. This path must include the hive.
+
+    .Parameter AllowedValueNames
+        A list of the allowed value names.
+
+    .Parameter DependsOn
+        Indicates that the configuration of another resource must run before this resource is configured.
+        For example, if the ID of the resource configuration script block that you want to run first is **ResourceName** and its type is **ResourceType**, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.
 
     .Example
         Remove-RegistryPlusExcessValueNames -InstanceName 'Remove_Excess_Values' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\TestKey2\C:/Program Files (x86)/' -AllowedValueNames = @('My Value', 'Other Value')

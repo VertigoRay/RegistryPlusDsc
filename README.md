@@ -21,7 +21,7 @@ Registry 7Zip_FastCompression
 }
 ```
 
-However, if you want to do something more advanced that [Registry](https://docs.microsoft.com/en-us/powershell/dsc/registryresource) can't currently handle; use **RegistryPlus**. [See the wiki for more details ...](https://github.com/UNT-CAS/RegistryDsc/wiki)
+However, if you want to do something more advanced that [Registry](https://docs.microsoft.com/en-us/powershell/dsc/registryresource) can't currently handle; use **RegistryPlus**. [See the wiki for the details ...](https://github.com/UNT-CAS/RegistryDsc/wiki)
 
 # Installation
 
@@ -44,13 +44,4 @@ RegistryPlus Remove_Key
 }
 ```
 
-This is doable, with [Registry](https://docs.microsoft.com/en-us/powershell/dsc/registryresource). However, I believe it feels a bit clunky and [have asked for the rogue `ValueName` to be removed](https://github.com/PowerShell/PSDscResources/issues/101). Here's how you would do it with [Registry](https://docs.microsoft.com/en-us/powershell/dsc/registryresource):
-
-```powershell
-Registry Remove_Key
-{
-    Ensure = 'Absent'
-    Key = 'HKEY_LOCAL_MACHINE\SOFTWARE\Test'
-    ValueName = ''
-}
-```
+This is doable, with [Registry](https://docs.microsoft.com/en-us/powershell/dsc/registryresource). [Discussed more in the wiki ...](https://github.com/UNT-CAS/RegistryPlusDsc/wiki/Remove-Reg-Key)
