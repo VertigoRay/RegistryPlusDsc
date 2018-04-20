@@ -1,0 +1,6 @@
+.temp/
+BuildOutput/
+Demo_Configuration/
+
+RegistryPlus/*\.mof
+RegistryPlus/RegistryPlus\.psd1
